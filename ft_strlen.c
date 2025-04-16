@@ -6,7 +6,16 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 11:00:21 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/15 11:00:23 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/16 09:26:18 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+size_t	ft_strlen(const char *s)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
+}
