@@ -6,9 +6,11 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 11:00:21 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/16 09:30:19 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/16 09:52:15 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
