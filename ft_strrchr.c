@@ -6,7 +6,7 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 11:04:32 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/17 11:11:21 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/17 14:52:20 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,18 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char	*ptr;
-	char	*result;
-	size_t	i;
+	const char	*result;
+	size_t		i;
 
-	ptr = (char *)s;
 	result = NULL;
 	i = 0;
-	while (ptr[i] != '\0')
+	while (s[i] != '\0')
 	{
-		if (ptr[i] == c)
-			result = &ptr[i];
+		if (s[i] == (unsigned char)c)
+			result = &s[i];
 		i++;
 	}
-	if (ptr[i] == c)
-		result = &ptr[i];
-	return (result);
+	if ((unsigned char)c == '\0')
+		return ((char *)&s[i]);
+	return ((char *)result);
 }
