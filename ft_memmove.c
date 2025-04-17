@@ -6,7 +6,7 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 11:02:09 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/16 17:49:45 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/17 08:26:29 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char		*ptrd;
-	const unsigned char	*ptrs;
-	size_t				i;
+	char		*ptrd;
+	const char	*ptrs;
+	size_t		i;
 
-	ptrd = (unsigned char *)dest;
-	ptrs = (const unsigned char *)src;
+	ptrd = (char *)dest;
+	ptrs = (const char *)src;
 	if (ptrs < ptrd)
 	{
 		i = n;
