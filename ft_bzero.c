@@ -6,7 +6,7 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 11:01:22 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/17 16:37:06 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/17 17:07:54 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	char	*ptrs;
-	size_t	i;
+	unsigned char	*ptrs;
+	size_t			i;
 
-	ptrs = (char *)s;
+	ptrs = (unsigned char *)s;
 	i = 0;
 	while (i < n)
 		ptrs[i++] = '\0';
