@@ -6,13 +6,13 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 11:03:27 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/16 19:14:58 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/17 15:07:04 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_toupper(int c)
 {
-	if (c >= 97 && c <= 122)
-		return (c - 32);
+	if (c >= 'a' && c <= 'z')
+		return (c - ('a' - 'A'));
 	return (c);
 }
