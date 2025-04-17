@@ -6,7 +6,7 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 11:00:48 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/17 08:28:09 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/16 14:30:14 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	char			*ptr;
+	unsigned char	*ptr;
 	unsigned char	uchar;
 	size_t			i;
 
-	ptr = (char *)s;
+	ptr = (unsigned char *)s;
 	uchar = (unsigned char)c;
 	i = 0;
 	while (i < n)
