@@ -6,7 +6,7 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 11:04:02 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/17 09:07:44 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/17 09:42:13 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strchr(const char *s, int c)
 			return (&ptr[i]);
 		i++;
 	}
-	if (ptr[i] == '\0')
+	if (ptr[i] == c)
 		return (&ptr[i]);
 	return (NULL);
 }
