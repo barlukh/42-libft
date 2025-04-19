@@ -1,6 +1,14 @@
 #include <stdio.h>
 int	main(void)
 {
+	// ft_atoi
+	printf("\nft_atoi\n");
+	printf("Input: \"-2147483648\" | Return: %d\n", ft_atoi("-2147483648"));
+	printf("Input: \"2147483647\" | Return: %d\n", ft_atoi("2147483647"));
+	printf("Input: \"a\" | Return: %d\n", ft_atoi("a"));
+	printf("Input: \"    -56\" | Return: %d\n", ft_atoi("    -56"));
+	printf("Input: \"  ---56\" | Return: %d\n", ft_atoi("  ---56"));
+	
 	// ft_bzero
 	printf("\nft_bzero\n");
 	char buffer1[6] = "BBBBBB";
@@ -13,6 +21,18 @@ int	main(void)
 		i++;
 	}
 	printf("\n");
+
+	// ft_calloc
+	size_t nmemb = 3;
+	size_t size = 4;
+	size_t i = 0;
+	char *s = ft_calloc(nmemb, size);
+	while (i < nmemb * size + 10)
+	{
+		printf("%d", s[i]);
+		i++;
+	}
+	free(s);
 
 	// ft_isalnum
 	printf("\nft_isalnum\n");
@@ -95,6 +115,12 @@ int	main(void)
 	printf("Input: \"Hello world!\", 'y' | Return: %s\n", ft_strrchr("Hello world!", 'y'));
 	printf("Input: \"Hello world!\", '\\0' | Return: %s\n", ft_strrchr("Hello world!", '\0'));
 
+	// ft_strdup
+	printf("\nft_strdup\n");
+	printf("Input: \"Hello world!\" | Return: %s\n", ft_strdup("Hello world!"));
+	printf("Input: \"BORIS\" | Return: %s\n", ft_strdup("BORIS"));
+	printf("Input: \"\" | Return: %s\n", ft_strdup(""));
+
 	// ft_strlcat
 	printf("\nft_strlcat\n");
 	char dst6[50] = "123456";
@@ -120,7 +146,7 @@ int	main(void)
 	printf("Input: dst \"123456\", src \"Hello world!\", 3 | Return: %zu, dst %s\n", ft_strlcpy(dst3, src3, 3), dst3);
 	char dst4[13] = "123456";
 	char src4[13] = "";
-	printf("Input: dst \"123456\", src \"\", 13 | Return: %zu, dst %s\n", ft_strlcpy(dst4, src4, 13), dst4);
+	printf("Input: dst \"123456\", src \"\", 0 | Return: %zu, dst %s\n", ft_strlcpy(dst4, src4, 0), dst4);
 	char dst5[13] = "123456";
 	char src5[13] = "Hello world!";
 	printf("Input: dst \"123456\", src \"Hello world!\", 13 | Return: %zu, dst %s\n", ft_strlcpy(dst5, src5, 13), dst5);
