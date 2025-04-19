@@ -6,13 +6,14 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 09:06:45 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/19 13:59:52 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/19 15:46:01 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <stdint.h>
 # include <stdlib.h>
 
 int		ft_atoi(const char *nptr);
