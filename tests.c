@@ -1,4 +1,6 @@
+#include "libft.h"
 #include <stdio.h>
+
 int	main(void)
 {
 	// ft_atoi
@@ -23,14 +25,15 @@ int	main(void)
 	printf("\n");
 
 	// ft_calloc
+	printf("\nft_calloc\n");
 	size_t nmemb = 3;
 	size_t size = 4;
-	size_t i = 0;
+	size_t j = 0;
 	char *s = ft_calloc(nmemb, size);
-	while (i < nmemb * size + 10)
+	while (j < nmemb * size + 10)
 	{
-		printf("%d", s[i]);
-		i++;
+		printf("%d", s[j]);
+		j++;
 	}
 	free(s);
 
