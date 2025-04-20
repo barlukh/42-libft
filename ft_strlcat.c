@@ -6,9 +6,23 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 11:03:05 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/18 12:12:42 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/20 15:11:18 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* The ft_strlcat() function concatenates strings and NUL-terminates the result.
+ * It appends the NUL-terminated string 'src' to the end of 'dst';
+ * at most 'size' - ft_strlen(dst) - 1 bytes, NUL-terminating the result.
+ * 'size' = total size of the destination buffer, including NUL.
+ * 
+ * Functionality:
+ * The function counts lengths of 'src' and 'dst' with ft_strlen().
+ * Checks to ensure that 'size' > length of 'dst'.
+ * Appends 'src' to 'dst' and inserts '\0' as the last character.
+ * 
+ * Return value:
+ * Returns the total length of the string it tried to create, that means 
+ * the initial length of 'dst' plus the length of 'src'. */
 
 #include "libft.h"
 

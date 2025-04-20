@@ -6,9 +6,21 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 11:02:09 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/17 08:43:09 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/20 14:09:19 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* The memmove() function copies 'n' bytes from memory area 'src'
+ * to memory area 'dest'. Copying is done either from the first positon,
+ * or last, depending on the order of the areas in the memory.  
+ * 
+ * Functionality:
+ * Type casts both pointers to 'unsigned char *' to access their values.
+ * Retains 'const' on the 'ptrs' pointer to preserve the immutability.
+ * Iterates 'n' number of times, copying from 'ptrs' to 'ptrd'.
+ * 
+ * Return value:
+ * Returns a pointer to 'dest'. */
 
 #include "libft.h"
 

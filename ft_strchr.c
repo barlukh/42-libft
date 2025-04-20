@@ -6,9 +6,21 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 11:04:02 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/17 15:46:34 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/20 13:53:12 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* The ft_strchr() function returns a pointer to the first occurrence
+ * of the character 'c' in the string 's'.
+ * 
+ * Functionality:
+ * Iterates through the 's' string and compares values to 'c'.
+ * Variable 'c' is type casted to an unsigned char type on each comparison.
+ * The terminating null byte is considered part of the string, so that if 'c'
+ * is specified as '\0', the function returns a pointer to the terminator.
+ * 
+ * Return value:
+ * Returns a pointer to the matched 'c' or NULL if the character is not found. */
 
 #include "libft.h"
 

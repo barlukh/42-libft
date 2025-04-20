@@ -6,9 +6,25 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 11:06:45 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/18 13:28:36 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/20 15:58:12 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* The ft_strnstr() function locates the first occurrence of the null-terminated
+ * string 'little' in the string 'big', where not more than 'len' characters
+ * are searched. Characters that appear after a ‘\0’ character are not searched.
+ * 
+ * Functionality:
+ * Counts the lengths of 'big' and 'little'.
+ * Iterates through the 'big' string and compares 'little' on each iteration.
+ * Comparison is done using ft_strncmp() function.
+ * Check is in place to not overstep beyond '\0' nor past the 'len' value.
+ * 
+ * Return value:
+ * If 'little' is an empty string, 'big' is returned;
+ * if 'little' occurs nowhere in 'big', NULL is returned;
+ * otherwise a pointer to the first character of the first occurrence 
+ * of 'little' is returned. */
 
 #include "libft.h"
 
