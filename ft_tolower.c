@@ -6,14 +6,15 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 11:03:45 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/20 16:34:13 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/20 17:56:14 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Checks for an uppercase letter.
+/* Converts uppercase letter to lowercase.
  * 
  * Return value:
- * Returns 1 on True, or 0 on False. */
+ * If 'c' is an uppercase letter, ft_tolower() returns its lowercase equivalent.
+ * Otherwise, it returns c. */
 
 int	ft_tolower(int c)
 {
