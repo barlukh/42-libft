@@ -6,7 +6,7 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 11:04:02 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/20 13:53:12 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/20 17:46:16 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
  * is specified as '\0', the function returns a pointer to the terminator.
  * 
  * Return value:
- * Returns a pointer to the matched 'c' or NULL if the character is not found. */
+ * Returns a pointer to the matched 'c' or NULL if the 'c' is not found. */
 
 #include "libft.h"
 
