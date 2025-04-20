@@ -6,7 +6,7 @@
 #    By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/04 12:20:07 by bgazur            #+#    #+#              #
-#    Updated: 2025/04/20 07:16:00 by bgazur           ###   ########.fr        #
+#    Updated: 2025/04/20 18:06:33 by bgazur           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,12 +21,9 @@ ${NAME}: ${OBJS}
 	ar rcs ${NAME} ${OBJS}
 
 .c.o:
-	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+	${CC} ${CFLAGS} -c $< -o $@
 
 all: ${NAME}
-
-test: ${NAME} ${TEST_OBJ}
-	${CC} ${CFLAGS} -o ${NAME}
 
 clean:
 	${RM} ${OBJS}
@@ -36,4 +33,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re test
+.PHONY: all clean fclean re
