@@ -581,6 +581,10 @@ void	ft_strdup_test()
 		printf("Test 4: OK\n");
 	else
 		printf("Test 4: FAIL\n");
+
+	free(result0);
+	free(result1);
+	free(result2);
 }
 
 void	ft_strlcat_test(void)
