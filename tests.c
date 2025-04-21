@@ -587,6 +587,53 @@ void	ft_strdup_test()
 	free(result2);
 }
 
+void	ft_strjoin_test(void)
+{
+	char	*result0 = ft_strjoin("Hello", "Boris");
+	char	*result1 = ft_strjoin("Hello", NULL);
+	char	*result2 = ft_strjoin(NULL, "AAA");
+
+	// Test 1
+	if (result0[0] == 'H')
+		printf("Test 1: OK\n");
+	else
+		printf("Test 1: FAIL\n");
+	
+	// Test 2
+	if (result0[9] == 's')
+		printf("Test 2: OK\n");
+	else
+		printf("Test 2: FAIL\n");
+
+	// Test 3
+	if (result0[10] == '\0')
+		printf("Test 3: OK\n");
+	else
+		printf("Test 3: FAIL\n");
+
+	// Test 4
+	if (result0[7] == 'r')
+		printf("Test 4: OK\n");
+	else
+		printf("Test 4: FAIL\n");
+
+	// Test 5
+	if (result1 == NULL)
+		printf("Test 5: OK\n");
+	else
+		printf("Test 5: FAIL\n");
+
+	// Test 6
+	if (result2 == NULL)
+		printf("Test 6: OK\n");
+	else
+		printf("Test 6: FAIL\n");
+
+	free(result0);
+	free(result1);
+	free(result2);
+}
+
 void	ft_strlcat_test(void)
 {
 	char	dst0[50] = "123456";
@@ -798,6 +845,110 @@ void	ft_strrchr_test(void)
 		printf("Test 4: FAIL\n");
 }
 
+void	ft_strtrim_test(void)
+{
+	char	*result0 = ft_strtrim("BrtsBoooBtrB", "rBt");
+	char	*result1 = ft_strtrim("BrBBrr", "rB");
+	char	*result2 = ft_strtrim("Boris is home", "");
+	char	*result3 = ft_strtrim(NULL, "huhj");
+
+	// Test 1
+	if (result0[0] == 's')
+		printf("Test 1: OK\n");
+	else
+		printf("Test 1: FAIL\n");
+	
+	// Test 2
+	if (result0[1] == 'B')
+		printf("Test 2: OK\n");
+	else
+		printf("Test 2: FAIL\n");
+
+	// Test 3
+	if (result0[4] == 'o')
+		printf("Test 3: OK\n");
+	else
+		printf("Test 3: FAIL\n");
+
+	// Test 4
+	if (result0[5] == '\0')
+		printf("Test 4: OK\n");
+	else
+		printf("Test 4: FAIL\n");
+
+	// Test 5
+	if (result1[0] == '\0')
+		printf("Test 5: OK\n");
+	else
+		printf("Test 5: FAIL\n");
+
+	// Test 6
+	if (result2[12] == 'e')
+		printf("Test 6: OK\n");
+	else
+		printf("Test 6: FAIL\n");
+
+	// Test 7
+	if (result3 == NULL)
+		printf("Test 7: OK\n");
+	else
+		printf("Test 7: FAIL\n");
+	
+	free(result0);
+	free(result1);
+	free(result2);
+	free(result3);
+}
+
+void	ft_substr_test(void)
+{
+	char	*result0 = ft_substr("Boris is home", 0, 13);
+	char	*result1 = ft_substr("Boris is home", 5, 17);
+	char	*result2 = ft_substr("Boris is home", 7, 2);
+	char	*result3 = ft_substr(NULL, 0, 13);
+
+	// Test 1
+	if (result0[0] == 'B')
+		printf("Test 1: OK\n");
+	else
+		printf("Test 1: FAIL\n");
+	
+	// Test 2
+	if (result0[13] == '\0')
+		printf("Test 2: OK\n");
+	else
+		printf("Test 2: FAIL\n");
+
+	// Test 3
+	if (result1[0] == ' ')
+		printf("Test 3: OK\n");
+	else
+		printf("Test 3: FAIL\n");
+
+	// Test 4
+	if (result1[7] == 'e')
+		printf("Test 4: OK\n");
+	else
+		printf("Test 4: FAIL\n");
+
+	// Test 5
+	if (result2[2] == '\0')
+		printf("Test 5: OK\n");
+	else
+		printf("Test 5: FAIL\n");
+
+	// Test 6
+	if (result3 == NULL)
+		printf("Test 6: OK\n");
+	else
+		printf("Test 6: FAIL\n");
+
+	free(result0);
+	free(result1);
+	free(result2);
+	free(result3);
+}
+
 void	ft_tolower_test(void)
 {
 	// Test 1
@@ -899,6 +1050,9 @@ int	main(void)
 	printf("\nft_strdup\n");
 	ft_strdup_test();
 
+	printf("\nft_strjoin\n");
+	ft_strjoin_test();
+
 	printf("\nft_strlcat\n");
 	ft_strlcat_test();
 
@@ -916,6 +1070,12 @@ int	main(void)
 	
 	printf("\nft_strrchr\n");
 	ft_strrchr_test();
+
+	printf("\nft_strtrim\n");
+	ft_strtrim_test();
+
+	printf("\nft_substr\n");
+	ft_substr_test();
 
 	printf("\nft_tolower\n");
 	ft_tolower_test();
