@@ -6,7 +6,7 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 09:30:22 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/21 11:08:12 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/21 11:13:16 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,8 @@
  * Inserts '\0' as the last character.
  * 
  * Return value:
- * Returns NULL on invalid 's' or failed malloc(),
- * an empty string that can be freed if the index is beyond 's',
- * or the pointer to the start of substring 'ss' if succesful. */
+ * Returns NULL on invalid 's1', 's2' or failed malloc(),
+ * or the pointer to the start of string 's' if succesful. */
 
 #include "libft.h"
 
@@ -31,7 +30,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	s1_len;
 	size_t	s2_len;
 	char	*s;
-	
+
 	if (!s1 || !s2)
 		return (NULL);
 	s1_len = ft_strlen(s1);

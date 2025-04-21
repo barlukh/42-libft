@@ -6,7 +6,7 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 07:13:13 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/21 10:36:56 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/21 11:08:32 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
  * If the 'start' index is beyond the end of 's', returns an empty string.
  * Sets the variable 'ss_len', depending if 'len' overextends the end of 's'.
  * Allocates memory accordingly and calls ft_memcpy() to do the copying.
+ * Inserts '\0' as the last character.
  * 
  * Return value:
  * Returns NULL on invalid 's' or failed malloc(),
