@@ -6,11 +6,11 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 11:00:48 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/20 12:18:47 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/21 10:35:48 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* The ft_bzero() function fills the first 'n' bytes of the memory area
+/* The ft_memset() function fills the first 'n' bytes of the memory area
  * pointed to by 's' with the constant byte 'c'.
  * 
  * Functionality:
