@@ -6,7 +6,7 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 07:13:13 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/21 10:33:06 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/21 10:36:56 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@
  * or the pointer to the start of substring 'ss' if successful. */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
