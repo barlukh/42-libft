@@ -6,7 +6,7 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 07:13:13 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/21 09:24:39 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/21 09:27:34 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	i = 0;
 	while (s[start] != '\0' && i < len)
-			ss[i++] = s[start++];
+		ss[i++] = s[start++];
 	ss[i] = '\0';
 	return (ss);
 }
