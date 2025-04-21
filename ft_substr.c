@@ -6,7 +6,7 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 07:13:13 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/21 09:48:57 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/21 10:12:04 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@
  * Counts the length of 's' using ft_strlen() function.
  * If the 'start' index is beyond the end of 's', returns an empty string.
  * Sets the variable 'ss_len', depending if 'len' overextends the end of 's'.
- * Allocates memory accordingly and copies the values to create the substring.
- * Inserts '\0' as the last character.
+ * Allocates memory accordingly and calls ft_strlcpy() to do the copying.
  * 
  * Return value:
  * Returns NULL on invalid 's' or failed malloc(),
@@ -35,7 +34,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	start_i;
 	size_t	ss_len;
 	char	*ss;
-	size_t	i;
 
 	if (!s)
 		return (NULL);
@@ -50,9 +48,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ss = malloc(sizeof(char) * ss_len + 1);
 	if (!ss)
 		return (NULL);
-	i = 0;
-	while (s[start_i] != '\0' && i < len)
-		ss[i++] = s[start_i++];
-	ss[i] = '\0';
+	ft_strlcpy(ss, s + start_i, ss_len + 1);
 	return (ss);
 }
