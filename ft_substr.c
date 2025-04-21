@@ -6,7 +6,7 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 07:13:13 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/21 10:12:04 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/21 10:33:06 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,15 @@
  * Counts the length of 's' using ft_strlen() function.
  * If the 'start' index is beyond the end of 's', returns an empty string.
  * Sets the variable 'ss_len', depending if 'len' overextends the end of 's'.
- * Allocates memory accordingly and calls ft_strlcpy() to do the copying.
+ * Allocates memory accordingly and calls ft_memcpy() to do the copying.
  * 
  * Return value:
  * Returns NULL on invalid 's' or failed malloc(),
  * an empty string that can be freed if the index is beyond 's',
- * or the pointer to the start of substring 'ss' if succesful. */
+ * or the pointer to the start of substring 'ss' if successful. */
 
 #include "libft.h"
+#include <stdio.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -48,6 +49,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ss = malloc(sizeof(char) * ss_len + 1);
 	if (!ss)
 		return (NULL);
-	ft_strlcpy(ss, s + start_i, ss_len + 1);
+	ft_memcpy(ss, s + start_i, ss_len);
+	ss[ss_len] = '\0';
 	return (ss);
 }
