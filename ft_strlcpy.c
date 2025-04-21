@@ -6,7 +6,7 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 11:02:36 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/20 15:12:21 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/21 10:18:09 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
  * 
  * Return value:
  * Returns the total length of the string it tried to create, that means 
- * the length 'src'. */
+ * the length of 'src'. */
 
 #include "libft.h"
 
