@@ -322,6 +322,7 @@ void	ft_itoa_test(void)
 	char	*result1 = ft_itoa(-8475);
 	char	*result2 = ft_itoa(2147483647);
 	char	*result3 = ft_itoa(-2147483648);
+	char	*result4 = ft_itoa(0);
 
 	// Test 1
 	if (result0[0] == '6')
@@ -330,58 +331,58 @@ void	ft_itoa_test(void)
 		printf("Test 1: FAIL\n");
 
 	// Test 2
-	if (result0[2] == '7')
+	if (result0[3] == '\0')
 		printf("Test 2: OK\n");
 	else
 		printf("Test 2: FAIL\n");
 
 	// Test 3
-	if (result0[3] == '\0')
+	if (result1[0] == '-')
 		printf("Test 3: OK\n");
 	else
 		printf("Test 3: FAIL\n");
 
 	// Test 4
-	if (result1[0] == '-')
+	if (result1[1] == '8')
 		printf("Test 4: OK\n");
 	else
 		printf("Test 4: FAIL\n");
-
+	
 	// Test 5
-	if (result1[1] == '8')
+	if (result2[0] == '2')
 		printf("Test 5: OK\n");
 	else
 		printf("Test 5: FAIL\n");
-	
+
 	// Test 6
-	if (result2[0] == '2')
+	if (result2[9] == '7')
 		printf("Test 6: OK\n");
 	else
 		printf("Test 6: FAIL\n");
 
 	// Test 7
-	if (result2[9] == '7')
+	if (result3[0] == '-')
 		printf("Test 7: OK\n");
 	else
 		printf("Test 7: FAIL\n");
 
 	// Test 8
-	if (result3[0] == '-')
+	if (result3[10] == '8')
 		printf("Test 8: OK\n");
 	else
 		printf("Test 8: FAIL\n");
 
 	// Test 9
-	if (result3[1] == '2')
+	if (result4[0] == '0')
 		printf("Test 9: OK\n");
 	else
 		printf("Test 9: FAIL\n");
 
-	// Test 0
-	if (result3[10] == '8')
-		printf("Test 0: OK\n");
-	else
-		printf("Test 0: FAIL\n");
+	free(result0);
+	free(result1);
+	free(result2);
+	free(result3);
+	free(result4);
 }
 
 void	ft_memchr_test(void)
@@ -862,6 +863,56 @@ void	ft_strlen_test(void)
 		printf("Test 3: FAIL\n");
 }
 
+char	ft_strmapi_test_f(unsigned int i, char c)
+{
+	if (i % 2 == 0)
+		return (c - 32);
+	return (c);
+}
+
+void	ft_strmapi_test(void)
+{
+	char	*result0 = ft_strmapi("aaaaaaaaa", &ft_strmapi_test_f);
+
+	// Test 1
+	if (result0[0] == 'A')
+		printf("Test 1: OK\n");
+	else
+		printf("Test 1: FAIL\n");
+
+	// Test 2
+	if (result0[1] == 'a')
+		printf("Test 2: OK\n");
+	else
+		printf("Test 2: FAIL\n");
+
+	// Test 3
+	if (result0[2] == 'A')
+		printf("Test 3: OK\n");
+	else
+		printf("Test 3: FAIL\n");
+
+	// Test 4
+	if (result0[3] == 'a')
+		printf("Test 4: OK\n");
+	else
+		printf("Test 4: FAIL\n");
+	
+	// Test 5
+	if (result0[8] == 'A')
+		printf("Test 5: OK\n");
+	else
+		printf("Test 5: FAIL\n");
+
+	// Test 6
+	if (result0[9] == '\0')
+		printf("Test 6: OK\n");
+	else
+		printf("Test 6: FAIL\n");
+
+	free(result0);
+}
+
 void	ft_strncmp_test(void)
 {
 	// Test 1
@@ -1176,6 +1227,9 @@ int	main(void)
 	
 	printf("\nft_strlen\n");
 	ft_strlen_test();
+
+	printf("\nft_strmapi\n");
+	ft_strmapi_test();
 
 	printf("\nft_strncmp\n");
 	ft_strncmp_test();
