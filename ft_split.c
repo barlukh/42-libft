@@ -6,7 +6,7 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 14:38:11 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/22 09:40:01 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/22 10:04:39 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
  * 
  * Functionality:
  * Counts the words, therefore counts the number of subarrays to malloc() for.
- * Uses pointer arithmetic together with the ft_strchr() to find word lenghts.
- * Correct pointer positions with word lenghts are then sent to ft_substr().
+ * Uses pointer arithmetic together with the ft_strchr() to find word lengths.
+ * Correct pointer positions with word lengths are then sent to ft_substr().
  * Memory allocation fails are handled through ft_free_array().
  * Last subarray is NULL-terminated.
  * 
