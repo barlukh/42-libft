@@ -6,7 +6,7 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 10:11:09 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/22 14:22:27 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/22 14:56:39 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
  * 
  * Functionality:
  * Counts positions of 'n' with the helper ft_count_digits() function.
- * Casts 'n' into long long int to handle INT_MIN * -1.
+ * Determines a bool value for 'is_negative' with ft_is_negative().
  * Allocates appropriate memory using malloc(), accounting for negative sign.
  * Converts the int into string using modulo calculation.
  * 
@@ -23,7 +23,6 @@
  * Returns the string representing the integer, NULL if the allocation fails. */
 
 #include "libft.h"
-#include <stdio.h>
 
 static size_t	ft_count_digits(int n)
 {
@@ -40,15 +39,24 @@ static size_t	ft_count_digits(int n)
 	return (i);
 }
 
+static int	ft_is_negative(int n)
+{
+	if (n < 0)
+		return (1);
+	return (0);
+}
+
 char	*ft_itoa(int n)
 {
-	size_t			positions;
-	char			*str;
+	size_t	positions;
+	int		is_negative;
+	char	*str;
 
 	if (n == INT_MIN)
 		return (ft_strdup("-2147483648"));
 	positions = ft_count_digits(n);
-	if (n < 0)
+	is_negative = ft_is_negative(n);
+	if (is_negative)
 	{
 		positions++;
 		n *= -1;
@@ -62,7 +70,7 @@ char	*ft_itoa(int n)
 		str[positions] = n % 10 + '0';
 		n /= 10;
 	}
-	if (n < 0)
+	if (is_negative)
 		str[0] = '-';
 	return (str);
 }
