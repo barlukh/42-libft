@@ -6,7 +6,7 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 09:30:22 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/21 11:13:16 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/22 15:49:37 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
-	s = malloc(sizeof(char) * s1_len + s2_len + 1);
+	s = malloc(sizeof(char) * (s1_len + s2_len + 1));
 	if (!s)
 		return (NULL);
 	ft_memcpy(s, s1, s1_len);

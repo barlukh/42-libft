@@ -6,7 +6,7 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 07:13:13 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/21 11:08:32 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/22 15:49:05 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		ss_len = len;
 	else
 		ss_len = s_len - start_i;
-	ss = malloc(sizeof(char) * ss_len + 1);
+	ss = malloc(sizeof(char) * (ss_len + 1));
 	if (!ss)
 		return (NULL);
 	ft_memcpy(ss, s + start_i, ss_len);
