@@ -1,3 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   tests.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/23 10:17:35 by bgazur            #+#    #+#             */
+/*   Updated: 2025/04/23 14:45:36 by bgazur           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/* Testing file for the 'libft' project.
+ * First, create the libft.a library with the 'make' command.
+ * Second, compile tests.c with libft.a to create an executable file.
+ * 
+ * Functions *_fd are tested by reading from a stderr.log file;
+ * The execuable must be there launched with ./a.out 2>stderr.log command.
+ * 
+ * Note: This testing method doesn't guarantee you to pass the prject. */
+
 #include "libft.h"
 #include <stdio.h>
 
@@ -589,6 +610,178 @@ void	ft_memset_test(void)
 		printf("Test 6: FAIL\n");
 }
 
+void	ft_putchar_fd_test(void)
+{
+	ft_putchar_fd('a', 2);
+
+    FILE *file = fopen("stderr.log", "r");
+    if (file == NULL) {
+        printf("Failed to open file\n");
+        return ;
+    }
+	
+	// Test 1
+	char firstChar = fgetc(file);
+	
+	if (firstChar == EOF)
+	{
+        printf("Failed to read the file\n");
+        fclose(file);
+        return ;
+	}
+
+	if (firstChar == 'a')
+		printf("Test 1: OK\n");
+	else
+		printf("Test 1: FAIL\n");
+
+	// Test 2
+	char secondChar = fgetc(file);
+	
+	if (secondChar == EOF)
+		printf("Test 2: OK\n");
+	else
+		printf("Test 2: FAIL\n");
+
+    fclose(file);
+}
+
+void	ft_putendl_fd_test(void)
+{
+	ft_putendl_fd("BB", 2);
+
+    FILE *file = fopen("stderr.log", "r");
+    if (file == NULL) {
+        printf("Failed to open file\n");
+        return ;
+    }
+	
+	// Test 1
+	char firstChar = fgetc(file);
+	
+	if (firstChar == EOF)
+	{
+        printf("Failed to read the file\n");
+        fclose(file);
+        return ;
+	}
+
+	if (firstChar == 'a')
+		printf("Test 1: OK\n");
+	else
+		printf("Test 1: FAIL\n");
+
+	// Test 2
+	char secondChar = fgetc(file);
+	
+	if (secondChar == 'B')
+		printf("Test 2: OK\n");
+	else
+		printf("Test 2: FAIL\n");
+
+	// Test 3
+	char thirdChar = fgetc(file);
+	
+	if (thirdChar == 'B')
+		printf("Test 3: OK\n");
+	else
+		printf("Test 3: FAIL\n");
+
+	// Test 4
+	char fourthChar = fgetc(file);
+	
+	if (fourthChar == '\n')
+		printf("Test 4: OK\n");
+	else
+		printf("Test 4: FAIL\n");
+
+	// Test 5
+	char fifthChar = fgetc(file);
+	
+	if (fifthChar == EOF)
+		printf("Test 5: OK\n");
+	else
+		printf("Test 5: FAIL\n");
+	
+	fclose(file);
+}
+
+void	ft_putstr_fd_test(void)
+{
+	ft_putstr_fd("CC", 2);
+
+    FILE *file = fopen("stderr.log", "r");
+    if (file == NULL) {
+        printf("Failed to open file\n");
+        return ;
+    }
+	
+	// Test 1
+	char firstChar = fgetc(file);
+	
+	if (firstChar == EOF)
+	{
+        printf("Failed to read the file\n");
+        fclose(file);
+        return ;
+	}
+
+	if (firstChar == 'a')
+		printf("Test 1: OK\n");
+	else
+		printf("Test 1: FAIL\n");
+
+	// Test 2
+	char secondChar = fgetc(file);
+	
+	if (secondChar == 'B')
+		printf("Test 2: OK\n");
+	else
+		printf("Test 2: FAIL\n");
+
+	// Test 3
+	char thirdChar = fgetc(file);
+	
+	if (thirdChar == 'B')
+		printf("Test 3: OK\n");
+	else
+		printf("Test 3: FAIL\n");
+
+	// Test 4
+	char fourthChar = fgetc(file);
+	
+	if (fourthChar == '\n')
+		printf("Test 4: OK\n");
+	else
+		printf("Test 4: FAIL\n");
+
+	// Test 5
+	char fifthChar = fgetc(file);
+	
+	if (fifthChar == 'C')
+		printf("Test 5: OK\n");
+	else
+		printf("Test 5: FAIL\n");
+	
+	// Test 6
+	char sixthChar = fgetc(file);
+	
+	if (sixthChar == 'C')
+		printf("Test 6: OK\n");
+	else
+		printf("Test 6: FAIL\n");
+
+	// Test 7
+	char seventhChar = fgetc(file);
+
+	if (seventhChar == EOF)
+		printf("Test 7: OK\n");
+	else
+		printf("Test 7: FAIL\n");
+	
+	fclose(file);
+}
+
 void	ft_split_test(void)
 {
 	char	**result0 = ft_split("  Hello my name is Boris  ", ' ');
@@ -695,6 +888,54 @@ void	ft_strdup_test()
 	free(result0);
 	free(result1);
 	free(result2);
+}
+
+void	ft_striteri_test_f(unsigned int i, char *c)
+{
+	if (i % 2 == 0)
+		*c = *c - 32;
+}
+
+void	ft_striteri_test(void)
+{
+	char	s[10] = "aaaaaaaaa";
+	ft_striteri(s, &ft_striteri_test_f);
+
+	// Test 1
+	if (s[0] == 'A')
+		printf("Test 1: OK\n");
+	else
+		printf("Test 1: FAIL\n");
+
+	// Test 2
+	if (s[1] == 'a')
+		printf("Test 2: OK\n");
+	else
+		printf("Test 2: FAIL\n");
+
+	// Test 3
+	if (s[2] == 'A')
+		printf("Test 3: OK\n");
+	else
+		printf("Test 3: FAIL\n");
+
+	// Test 4
+	if (s[3] == 'a')
+		printf("Test 4: OK\n");
+	else
+		printf("Test 4: FAIL\n");
+	
+	// Test 5
+	if (s[8] == 'A')
+		printf("Test 5: OK\n");
+	else
+		printf("Test 5: FAIL\n");
+
+	// Test 6
+	if (s[9] == '\0')
+		printf("Test 6: OK\n");
+	else
+		printf("Test 6: FAIL\n");
 }
 
 void	ft_strjoin_test(void)
@@ -1207,6 +1448,15 @@ int	main(void)
 	printf("\nft_memset\n");
 	ft_memset_test();
 
+	printf("\nft_putchar_fd\n");
+	ft_putchar_fd_test();
+
+	printf("\nft_putendl_fd\n");
+	ft_putendl_fd_test();
+
+	printf("\nft_putstr_fd\n");
+	ft_putstr_fd_test();
+
 	printf("\nft_split\n");
 	ft_split_test();
 
@@ -1215,6 +1465,9 @@ int	main(void)
 
 	printf("\nft_strdup\n");
 	ft_strdup_test();
+
+	printf("\nft_striteri\n");
+	ft_striteri_test();
 
 	printf("\nft_strjoin\n");
 	ft_strjoin_test();
