@@ -6,7 +6,7 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 10:17:35 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/23 14:45:36 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/24 10:46:11 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -621,24 +621,24 @@ void	ft_putchar_fd_test(void)
     }
 	
 	// Test 1
-	char firstChar = fgetc(file);
+	char char1 = fgetc(file);
 	
-	if (firstChar == EOF)
+	if (char1 == EOF)
 	{
         printf("Failed to read the file\n");
         fclose(file);
         return ;
 	}
 
-	if (firstChar == 'a')
+	if (char1 == 'a')
 		printf("Test 1: OK\n");
 	else
 		printf("Test 1: FAIL\n");
 
 	// Test 2
-	char secondChar = fgetc(file);
+	char char2 = fgetc(file);
 	
-	if (secondChar == EOF)
+	if (char2 == EOF)
 		printf("Test 2: OK\n");
 	else
 		printf("Test 2: FAIL\n");
@@ -657,52 +657,136 @@ void	ft_putendl_fd_test(void)
     }
 	
 	// Test 1
-	char firstChar = fgetc(file);
+	char char1 = fgetc(file);
 	
-	if (firstChar == EOF)
+	if (char1 == EOF)
 	{
         printf("Failed to read the file\n");
         fclose(file);
         return ;
 	}
 
-	if (firstChar == 'a')
+	if (char1 == 'a')
 		printf("Test 1: OK\n");
 	else
 		printf("Test 1: FAIL\n");
 
 	// Test 2
-	char secondChar = fgetc(file);
+	char char2 = fgetc(file);
 	
-	if (secondChar == 'B')
+	if (char2 == 'B')
 		printf("Test 2: OK\n");
 	else
 		printf("Test 2: FAIL\n");
 
 	// Test 3
-	char thirdChar = fgetc(file);
+	char char3 = fgetc(file);
 	
-	if (thirdChar == 'B')
+	if (char3 == 'B')
 		printf("Test 3: OK\n");
 	else
 		printf("Test 3: FAIL\n");
 
 	// Test 4
-	char fourthChar = fgetc(file);
+	char char4 = fgetc(file);
 	
-	if (fourthChar == '\n')
+	if (char4 == '\n')
 		printf("Test 4: OK\n");
 	else
 		printf("Test 4: FAIL\n");
 
 	// Test 5
-	char fifthChar = fgetc(file);
+	char char5 = fgetc(file);
 	
-	if (fifthChar == EOF)
+	if (char5 == EOF)
 		printf("Test 5: OK\n");
 	else
 		printf("Test 5: FAIL\n");
 	
+	fclose(file);
+}
+
+void	ft_putnbr_fd_test(void)
+{
+	ft_putnbr_fd(-45, 2);
+
+    FILE *file = fopen("stderr.log", "r");
+    if (file == NULL) {
+        printf("Failed to open file\n");
+        return ;
+    }
+	
+	// Test 1
+	char char1 = fgetc(file);
+	
+	if (char1 == EOF)
+	{
+        printf("Failed to read the file\n");
+        fclose(file);
+        return ;
+	}
+
+	if (char1 == 'a')
+		printf("Test 1: OK\n");
+	else
+		printf("Test 1: FAIL\n");
+
+	// Test 2
+	char char2 = fgetc(file);
+	
+	if (char2 == 'B')
+		printf("Test 2: OK\n");
+	else
+		printf("Test 2: FAIL\n");
+
+	// Test 3
+	char char3 = fgetc(file);
+	
+	if (char3 == 'B')
+		printf("Test 3: OK\n");
+	else
+		printf("Test 3: FAIL\n");
+
+	// Test 4
+	char char4 = fgetc(file);
+	
+	if (char4 == '\n')
+		printf("Test 4: OK\n");
+	else
+		printf("Test 4: FAIL\n");
+
+	// Test 5
+	char char5 = fgetc(file);
+	
+	if (char5 == '-')
+		printf("Test 5: OK\n");
+	else
+		printf("Test 5: FAIL\n");
+	
+	// Test 6
+	char char6 = fgetc(file);
+	
+	if (char6 == '4')
+		printf("Test 6: OK\n");
+	else
+		printf("Test 6: FAIL\n");
+
+	// Test 7
+	char char7 = fgetc(file);
+	
+	if (char7 == '5')
+		printf("Test 7: OK\n");
+	else
+		printf("Test 7: FAIL\n");
+
+	// Test 8
+	char char8 = fgetc(file);
+	
+	if (char8 == EOF)
+		printf("Test 8: OK\n");
+	else
+		printf("Test 8: FAIL\n");
+
 	fclose(file);
 }
 
@@ -717,68 +801,92 @@ void	ft_putstr_fd_test(void)
     }
 	
 	// Test 1
-	char firstChar = fgetc(file);
+	char char1 = fgetc(file);
 	
-	if (firstChar == EOF)
+	if (char1 == EOF)
 	{
         printf("Failed to read the file\n");
         fclose(file);
         return ;
 	}
 
-	if (firstChar == 'a')
+	if (char1 == 'a')
 		printf("Test 1: OK\n");
 	else
 		printf("Test 1: FAIL\n");
 
 	// Test 2
-	char secondChar = fgetc(file);
+	char char2 = fgetc(file);
 	
-	if (secondChar == 'B')
+	if (char2 == 'B')
 		printf("Test 2: OK\n");
 	else
 		printf("Test 2: FAIL\n");
 
 	// Test 3
-	char thirdChar = fgetc(file);
+	char char3 = fgetc(file);
 	
-	if (thirdChar == 'B')
+	if (char3 == 'B')
 		printf("Test 3: OK\n");
 	else
 		printf("Test 3: FAIL\n");
 
 	// Test 4
-	char fourthChar = fgetc(file);
+	char char4 = fgetc(file);
 	
-	if (fourthChar == '\n')
+	if (char4 == '\n')
 		printf("Test 4: OK\n");
 	else
 		printf("Test 4: FAIL\n");
 
 	// Test 5
-	char fifthChar = fgetc(file);
+	char char5 = fgetc(file);
 	
-	if (fifthChar == 'C')
+	if (char5 == '-')
 		printf("Test 5: OK\n");
 	else
 		printf("Test 5: FAIL\n");
 	
 	// Test 6
-	char sixthChar = fgetc(file);
+	char char6 = fgetc(file);
 	
-	if (sixthChar == 'C')
+	if (char6 == '4')
 		printf("Test 6: OK\n");
 	else
 		printf("Test 6: FAIL\n");
 
 	// Test 7
-	char seventhChar = fgetc(file);
-
-	if (seventhChar == EOF)
+	char char7 = fgetc(file);
+	
+	if (char7 == '5')
 		printf("Test 7: OK\n");
 	else
 		printf("Test 7: FAIL\n");
+
+	// Test 8
+	char char8 = fgetc(file);
 	
+	if (char8 == 'C')
+		printf("Test 8: OK\n");
+	else
+		printf("Test 8: FAIL\n");
+
+	// Test 9
+	char char9 = fgetc(file);
+	
+	if (char9 == 'C')
+		printf("Test 9: OK\n");
+	else
+		printf("Test 9: FAIL\n");
+
+	// Test 0
+	char char10 = fgetc(file);
+	
+	if (char10 == EOF)
+		printf("Test 0: OK\n");
+	else
+		printf("Test 0: FAIL\n");
+
 	fclose(file);
 }
 
@@ -1453,6 +1561,9 @@ int	main(void)
 
 	printf("\nft_putendl_fd\n");
 	ft_putendl_fd_test();
+
+	printf("\nft_putnbr_fd\n");
+	ft_putnbr_fd_test();
 
 	printf("\nft_putstr_fd\n");
 	ft_putstr_fd_test();
