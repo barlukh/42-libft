@@ -6,7 +6,7 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 11:08:23 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/20 12:22:27 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/24 15:01:09 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
  * is obtained with malloc(), and can be freed with free().
  * 
  * Functionality:
- * Counts the length of 's' with the ft_strlen function and allocates memory
+ * Counts the length of 's' with the ft_strlen() function and allocates memory
  * with malloc().
- * Iterates through 's' and copies values into newly allocated 'ptr' buffer.
+ * Uses ft_memcpy() to copy the 's' into the new memory location.
  * Inserts '\0' as the last character.
  * 
  * Return value:
@@ -37,11 +37,7 @@ char	*ft_strdup(const char *s)
 	if (ptr == NULL)
 		return (NULL);
 	i = 0;
-	while (s[i] != '\0')
-	{
-		ptr[i] = s[i];
-		i++;
-	}
-	ptr[i] = '\0';
+	ft_memcpy(ptr, s, s_len);
+	ptr[s_len] = '\0';
 	return (ptr);
 }
