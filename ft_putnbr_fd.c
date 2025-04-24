@@ -6,7 +6,7 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 14:48:46 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/24 10:48:02 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/24 11:17:58 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd('-', fd);
 		n = -n;
 	}
-	if (n > 10)
+	if (n > 9)
 		ft_putnbr_fd(n / 10, fd);
 	ft_putchar_fd('0' + (n % 10), fd);
 }
