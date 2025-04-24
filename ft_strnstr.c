@@ -6,7 +6,7 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 11:06:45 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/20 15:58:12 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/24 12:21:01 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	if (little_len == 0)
 		return ((char *)big);
 	i = 0;
-	while (i < big_len - little_len + 1 && i < len - little_len + 1)
+	while (i + little_len <= big_len && i + little_len <= len)
 	{
 		if (ft_strncmp(big + i, little, little_len) == 0)
 			return ((char *)big + i);
