@@ -6,14 +6,17 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 14:48:46 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/23 15:21:13 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/24 10:03:00 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /* Outputs the integer ’n’ to the specified file descriptor.
  * 
  * Functionality:
- * Uses the write() function to output to the correct file descriptor 'fd'.
+ * Checks for the INT_MIN outlier and writes it with ft_putstr_fd().
+ * Checks for a negative input and writes the '-' sign.
+ * Recursively converts each digit to a character with the help of modulo.
+ * All outputs are using write() and are done to the correct file descriptor.
  * 
  * Return value:
  * None. */
@@ -24,7 +27,7 @@ void ft_putnbr_fd(int n, int fd)
 {
 	if (n == INT_MIN)
 	{
-		ft_putstr_fd("-2147483648", 2);
+		ft_putstr_fd("-2147483648", fd);
 		return ;
 	}
 	if (n < 0)
@@ -33,12 +36,6 @@ void ft_putnbr_fd(int n, int fd)
 		n = -n;
 	}
 	if (n > 10)
-		ft_putnbr_fd(n / 10, 2);
+		ft_putnbr_fd(n / 10, fd);
 	ft_putchar_fd('0' + (n % 10), fd);
-}
-
-int main(void)
-{
-	ft_putnbr_fd(-2147483648, 1);
-	return (0);
 }
