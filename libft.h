@@ -6,7 +6,7 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 09:06:45 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/25 10:29:45 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/25 14:33:00 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@
 # include <stdint.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef struct		s_list
+{
+	void			*content;
+	struct s_list 	*next;
+}					t_list;
 
 /** Converts an initial portion of a string to an integer
  * @param nptr String to be converted
@@ -73,6 +79,36 @@ int		ft_isprint(int c);
  * @return String representing the int, 'NULL' if the allocation fails
  */
 char	*ft_itoa(int n);
+
+/** Adds a node at the end of a linked list
+ * @param lst The address of a pointer to the first node of a list
+ * @param new The address of a pointer to the node to be added
+ */
+void	ft_lstadd_back(t_list **lst, t_list *new);
+
+/** Adds a node at the beginning of a linked list
+ * @param lst The address of a pointer to the first node of a list
+ * @param new The address of a pointer to the node to be added
+ */
+void	ft_lstadd_front(t_list **lst, t_list *new);
+
+/** Returns the last node of the list
+ * @param lst The beginning of the list
+ * @return Last node of the list
+ */
+t_list	*ft_lstlast(t_list *lst);
+
+/** Creates a new node in a linked list
+ * @param content Content to store in the new node
+ * @return Pointer to the new node
+ */
+t_list	*ft_lstnew(void *content);
+
+/** Counts the number of nodes in a linked list
+ * @param lst The beginning of the list
+ * @return The length of the list
+ */
+int		ft_lstsize(t_list *lst);
 
 /** Scans a memory area for the first instance of 'c'
  * @param s Pointer to the memory area
@@ -163,7 +199,7 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s);
 
 /** Applies a function to each character of a string, passed as a pointer
- * @param s String (array of characters) to pass to the function
+ * @param s String to iterate over
  * @param f Function to apply to each character of the string
  * @return None
  */
@@ -199,7 +235,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlen(const char *s);
 
 /** Applies a function to each character of a string, creating a new string
- * @param s String (array of characters) to pass to the function
+ * @param s String to iterate over
  * @param f Function to apply to each character of the string
  * @return The string created, 'NULL' if the allocation fails
  */
