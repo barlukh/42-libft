@@ -6,7 +6,7 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 10:17:35 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/24 16:13:56 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/25 07:05:21 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
  * Second, compile tests.c with libft.a to create an executable file.
  * 
  * Functions *_fd are tested by reading from a stderr.log file;
- * The execuable must be there launched with ./a.out 2>stderr.log command.
+ * The execuable must be therefore launched with ./a.out 2>stderr.log command.
  * 
  * Note: This testing method doesn't guarantee you to pass the project.
- * Tests for the bonus are not included! */
+ * Tests for the bonuses are not included! */
 
 #include "libft.h"
 #include <stdio.h>
