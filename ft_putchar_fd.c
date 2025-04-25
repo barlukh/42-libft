@@ -6,17 +6,9 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 10:17:25 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/23 10:52:16 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/25 08:57:23 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/* Outputs the character ’c’ to the specified file descriptor.
- * 
- * Functionality:
- * Uses the write() function to output to the correct file descriptor 'fd'.
- * 
- * Return value:
- * None. */
 
 #include "libft.h"
 

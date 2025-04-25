@@ -6,20 +6,9 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 14:48:46 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/24 11:17:58 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/25 09:02:22 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/* Outputs the integer ’n’ to the specified file descriptor.
- * 
- * Functionality:
- * Checks for the INT_MIN outlier and writes it with ft_putstr_fd().
- * Checks for a negative input and writes the '-' sign.
- * Recursively converts each digit to a character with the help of modulo.
- * All outputs are using write() and are done to the correct file descriptor.
- * 
- * Return value:
- * None. */
 
 #include "libft.h"
 

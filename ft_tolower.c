@@ -6,15 +6,11 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 11:03:45 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/20 17:57:26 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/25 10:17:01 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Converts uppercase letter to lowercase.
- * 
- * Return value:
- * If 'c' is an uppercase letter, ft_tolower() returns its lowercase equivalent.
- * Otherwise, it returns 'c'. */
+#include "libft.h"
 
 int	ft_tolower(int c)
 {

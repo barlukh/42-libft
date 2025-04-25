@@ -6,22 +6,9 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 11:56:14 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/21 14:14:42 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/25 10:10:42 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/* Allocates memory (using malloc()) and returns a copy of ’s1’
- * with characters from ’set’ removed from the beginning and the end.
- * 
- * Functionality:
- * Checks if 's1' is a valid input.
- * Counts the length of 's1' using ft_strlen() function.
- * Sets 'start' and 'end' values through checks done with ft_strchr() function.
- * Final string is trimmed with the help of the ft_substr() function.
- * 
- * Return value:
- * Returns NULL on invalid 's1' or 'set', or failed malloc(),
- * or the pointer to the start of trimmed string 's1' if succesful. */
 
 #include "libft.h"
 

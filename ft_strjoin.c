@@ -6,22 +6,9 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 09:30:22 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/22 15:49:37 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/25 09:34:09 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/* Allocates memory (using malloc()) and returns a new string,
- * which is the result of concatenating ’s1’ and ’s2’.
- * 
- * Functionality:
- * Checks if 's1' and 's2' are valid inputs.
- * Counts the length of both strings using ft_strlen() function.
- * Allocates memory accordingly and calls ft_memcpy() to do the copying.
- * Inserts '\0' as the last character.
- * 
- * Return value:
- * Returns NULL on invalid 's1', 's2' or failed malloc(),
- * or the pointer to the start of string 's' if succesful. */
 
 #include "libft.h"
 

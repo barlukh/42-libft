@@ -6,20 +6,9 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 11:00:48 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/21 10:35:48 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/25 08:55:07 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/* The ft_memset() function fills the first 'n' bytes of the memory area
- * pointed to by 's' with the constant byte 'c'.
- * 
- * Functionality:
- * Type casts the 'void *s' to 'unsigned char *ptrs' to access its values.
- * Writes 'c', converted to unsigned char, into the byte on each iteration
- * as long as i < n.
- * 
- * Return value:
- * Returns a pointer to the memory area 's'. */
 
 #include "libft.h"
 

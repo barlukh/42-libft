@@ -6,14 +6,11 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 10:58:51 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/20 16:33:55 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/25 08:12:24 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Checks for any printable character including space.
- * 
- * Return value:
- * Returns 1 on True, or 0 on False. */
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

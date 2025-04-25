@@ -6,20 +6,11 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 08:22:46 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/24 09:14:38 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/25 09:30:10 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Applies the function ’f’ to each character of the string passed as argument,
- * passing its index as the first argument. Each character is passed by
- * address to ’f’ so it can be modified if necessary.
- * 
- * Functionality:
- * Iterates through 's' and passes each char as a pointer
- * to function 'f' with its index 'i'. Passed value can be modified directly.
- * 
- * Return value:
- * None. */
+#include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {

@@ -6,26 +6,9 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 07:13:13 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/22 15:49:05 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/25 10:14:57 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/* Allocates memory (using malloc()) and returns a substring
- * from the string ’s’. The substring starts at index ’start’ 
- * and has a maximum length of ’len’.
- * 
- * Functionality:
- * Checks if 's' is a valid input.
- * Counts the length of 's' using ft_strlen() function.
- * If the 'start' index is beyond the end of 's', returns an empty string.
- * Sets the variable 'ss_len', depending if 'len' overextends the end of 's'.
- * Allocates memory accordingly and calls ft_memcpy() to do the copying.
- * Inserts '\0' as the last character.
- * 
- * Return value:
- * Returns NULL on invalid 's' or failed malloc(),
- * an empty string that can be freed if the index is beyond 's',
- * or the pointer to the start of substring 'ss' if successful. */
 
 #include "libft.h"
 

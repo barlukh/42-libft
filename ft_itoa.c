@@ -6,24 +6,13 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 10:11:09 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/22 14:56:39 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/25 08:26:36 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Allocates memory (using malloc()) and returns a string representing
- * the integer received as an argument.
- * 
- * Functionality:
- * Counts positions of 'n' with the helper ft_count_digits() function.
- * Determines a bool value for 'is_negative' with ft_is_negative().
- * Allocates appropriate memory using malloc(), accounting for negative sign.
- * Converts the int into string using modulo calculation.
- * 
- * Return value:
- * Returns the string representing the integer, NULL if the allocation fails. */
-
 #include "libft.h"
 
+// Counts digit positions in 'n'
 static size_t	ft_count_digits(int n)
 {
 	size_t	i;
@@ -39,6 +28,7 @@ static size_t	ft_count_digits(int n)
 	return (i);
 }
 
+// Checks if 'n' is a negative integer
 static int	ft_is_negative(int n)
 {
 	if (n < 0)

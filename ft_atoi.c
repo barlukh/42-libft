@@ -6,24 +6,13 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 11:07:12 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/22 14:19:49 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/25 07:41:23 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* The ft_atoi() function converts the initial portion of the string
- * pointed to by 'nptr' to int.
- * 
- * Functionality:
- * Skips the whitespaces (as defined in ft_isspace()).
- * Single occurence of '+' or '-' is allowed and stored (sign = +1 by default).
- * Converts and stores the number sequence in the 'result' variable.
- * No overflow or underflow checks, in line with the atoi() function. 
- * 
- * Return value:
- * Returns the value in 'result' * 'sign' as an int (0 on error). */
-
 #include "libft.h"
 
+// Checks if 'c' is a white-space character
 static int	ft_isspace(int c)
 {
 	unsigned char	ch;
