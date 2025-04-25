@@ -6,7 +6,7 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 09:06:45 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/25 14:33:00 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/25 15:55:32 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,14 +83,23 @@ char	*ft_itoa(int n);
 /** Adds a node at the end of a linked list
  * @param lst The address of a pointer to the first node of a list
  * @param new The address of a pointer to the node to be added
+ * @return None
  */
 void	ft_lstadd_back(t_list **lst, t_list *new);
 
 /** Adds a node at the beginning of a linked list
  * @param lst The address of a pointer to the first node of a list
  * @param new The address of a pointer to the node to be added
+ * @return None
  */
 void	ft_lstadd_front(t_list **lst, t_list *new);
+
+/** Frees a content using passed function then frees a node itself
+ * @param lst The node to free
+ * @param del The address of the function used to delete the content
+ * @return None
+ */
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
 
 /** Returns the last node of the list
  * @param lst The beginning of the list
