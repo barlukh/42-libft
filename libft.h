@@ -6,7 +6,7 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 09:06:45 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/25 15:55:32 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/26 09:09:56 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-typedef struct		s_list
+typedef struct s_list
 {
 	void			*content;
-	struct s_list 	*next;
-}					t_list;
+	struct s_list	*next;
+}	t_list;
 
 /** Converts an initial portion of a string to an integer
  * @param nptr String to be converted
@@ -94,6 +94,13 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
  */
 void	ft_lstadd_front(t_list **lst, t_list *new);
 
+/** Deletes and frees a given node and all its successors
+ * @param lst The address of a pointer to the node
+ * @param del The address of the function used to delete the content
+ * @return None
+ */
+void	ft_lstclear(t_list **lst, void (*del)(void *));
+
 /** Frees a content using passed function then frees a node itself
  * @param lst The node to free
  * @param del The address of the function used to delete the content
@@ -101,11 +108,26 @@ void	ft_lstadd_front(t_list **lst, t_list *new);
  */
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 
+/** Iterates through a list and applies a function to a content
+ * @param lst The address of a pointer to a node
+ * @param f The address of the function to apply to each node’s content
+ * @return None
+ */
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+
 /** Returns the last node of the list
  * @param lst The beginning of the list
  * @return Last node of the list
  */
 t_list	*ft_lstlast(t_list *lst);
+
+/** Iterates through a list, applies a function to a content creating new list
+ * @param lst The address of a pointer to a node
+ * @param f The address of the function applied to each node’s content
+ * @param del The address of the function used to delete a node’s content
+ * @return None
+ */
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 /** Creates a new node in a linked list
  * @param content Content to store in the new node
