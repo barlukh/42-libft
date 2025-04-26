@@ -6,7 +6,7 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 09:06:45 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/26 09:33:28 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/26 10:34:00 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,7 +121,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
  */
 t_list	*ft_lstlast(t_list *lst);
 
-/** Iterates through a list, applies a function to a content creating new list
+/** Iterates through a list, applies a function to a content creating a new list
  * @param lst The address of a pointer to a node
  * @param f The address of the function applied to each node’s content
  * @param del The address of the function used to delete a node’s content
