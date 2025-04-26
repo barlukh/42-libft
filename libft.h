@@ -6,7 +6,7 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 09:06:45 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/26 09:09:56 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/04/26 09:14:41 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,7 +125,7 @@ t_list	*ft_lstlast(t_list *lst);
  * @param lst The address of a pointer to a node
  * @param f The address of the function applied to each node’s content
  * @param del The address of the function used to delete a node’s content
- * @return None
+ * @return New list, 'NULL' if the allocation fails
  */
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
