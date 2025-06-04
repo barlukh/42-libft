@@ -6,7 +6,7 @@
 /*   By: bgazur <bgazur@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 14:38:11 by bgazur            #+#    #+#             */
-/*   Updated: 2025/04/25 09:11:30 by bgazur           ###   ########.fr       */
+/*   Updated: 2025/06/04 08:37:41 by bgazur           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,8 @@ char	**ft_split(char const *s, char c)
 	if (!arr)
 		return (NULL);
 	arr = ft_allocate_array(s, c, arr);
+	if (!arr)
+		return (NULL);
 	arr[word_count] = NULL;
 	return (arr);
 }
